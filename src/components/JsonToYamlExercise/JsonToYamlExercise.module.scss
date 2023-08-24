@@ -1,0 +1,62 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  &>div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.75rem;
+
+    &>* {
+      flex: 1;
+    }
+
+    &[data-is-correct=true] {
+      p {
+        color: rgb(165, 229, 157);
+        background-color: rgba(92, 203, 70, 0.167);
+      }
+
+      button {
+        display: none;
+      }
+    }
+
+    &[data-is-correct=false] {
+      p {
+        color: rgb(229, 157, 157);
+        background-color: rgba(203, 70, 70, 0.167);
+      }
+    }
+  }
+
+  p:has(+ button) {
+    display: grid;
+    place-items: center;
+    color: rgb(173, 173, 173);
+    background-color: rgba(255, 255, 255, 0.088);
+    border-radius: 5px;
+    min-height: 2rem;
+  }
+
+  button {
+    box-sizing: content-box;
+    color: white;
+    background-color: rgb(90, 119, 205);
+    border: solid 2px rgb(44, 57, 116);
+
+    &:not(:disabled):hover {
+      background-color: rgb(73, 99, 177);
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper button {
+    min-width: 100%;
+  }
+}

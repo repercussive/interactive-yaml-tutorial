@@ -8,6 +8,19 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  margin: 0.75rem;
   background-color: rgb(24, 24, 26);
   color: white;
+}
+
+button {
+  border: none;
+  font-family: inherit;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 0.4rem 0;
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
 }

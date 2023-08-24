@@ -1,0 +1,22 @@
+.wrapper {
+  &>p {
+    color: gray;
+    margin-bottom: 0.4rem;
+  }
+
+  &>div {
+    box-sizing:content-box;
+    border-radius: 10px;
+    overflow: hidden;
+    border: solid 2px;
+    border-color: rgb(62, 62, 62);
+
+    &[data-highlight=green] {
+      border-color: rgb(161, 229, 161);
+    }
+
+    &[data-highlight=red] {
+      border-color: red;
+    }
+  }
+}

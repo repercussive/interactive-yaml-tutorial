@@ -4,33 +4,42 @@ import CodeMirror from '@uiw/react-codemirror'
 import { StreamLanguage } from '@codemirror/language'
 import { json } from '@codemirror/lang-json'
 import { yaml } from '@codemirror/legacy-modes/mode/yaml'
+import styles from './CodeEditor.module.scss'
 
 const yamlExtension = StreamLanguage.define(yaml)
 
-type CodeEditorProps = {
+type Props = {
   language: 'json' | 'yaml',
   readOnly?: boolean,
   startValue?: string,
   minHeight?: number,
-  maxHeight?: number
+  maxHeight?: number,
+  highlight?: 'red' | 'green' | undefined
+  onChange?: (newValue: string) => void,
 }
 
 export default function CodeEditor({ 
   language, 
-  readOnly = true, 
+  readOnly = false, 
   startValue = '',
   minHeight,
-  maxHeight
-}: CodeEditorProps) {
+  maxHeight,
+  onChange,
+  highlight
+}: Props) {
   return (
-    <div>
+    <div className={styles.wrapper}>
+      <p>{language.toUpperCase()}</p>
       <CodeMirror
         value={startValue}
         extensions={[language === 'json' ? json() : yamlExtension]}
         theme={'dark'}
-        minHeight={minHeight ? `${minHeight}lh` : undefined}
+        minHeight={minHeight ? `calc(${minHeight}lh + 4px)` : undefined}
         maxHeight={maxHeight ? `${maxHeight}lh` : undefined}
         readOnly={readOnly}
+        minWidth='300px'
+        onChange={(newValue) => onChange?.(newValue)}
+        data-highlight={highlight}
       />
     </div>
   )

@@ -1,4 +1,5 @@
-import CodeEditor from '@components/CodeEditor'
+import { JsonToYamlExercise } from '@components/JsonToYamlExercise'
+import exercise01 from '@json/exercises/01_simple.json'
 import styles from './page.module.scss'
 
 export default function Home() {
@@ -6,7 +7,7 @@ export default function Home() {
     <main className={styles.wrapper}>
       <div>
         <h1>Interactive YAML tutorial</h1>
-        <CodeEditor language='json' readOnly={false} />
+        <JsonToYamlExercise jsonData={exercise01}  />
       </div>
     </main>
   )
