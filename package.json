@@ -9,9 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@codemirror/lang-json": "^6.0.1",
+    "@codemirror/language": "^6.9.0",
+    "@codemirror/legacy-modes": "^6.3.3",
     "@types/node": "20.5.4",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
+    "@uiw/codemirror-extensions-langs": "^4.21.9",
+    "@uiw/react-codemirror": "^4.21.9",
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
