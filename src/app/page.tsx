@@ -52,6 +52,24 @@ export default function Home() {
           </p>
           <JsonToYamlExercise jsonData={exercises.exercise01} />
         </section>
+
+        <section data-example>
+          <h2>📃 Example: arrays</h2>
+          <p>In JSON, arrays are expressed in a similar way as in JavaScript:</p>
+          <CodeEditor initialValue={demos.exercise02.json} language='json' readOnly/>
+          <p>In YAML, the syntax looks quite different.</p>
+          <CodeEditor initialValue={demos.exercise02.yaml} language='yaml' readOnly />
+          <p>
+            Each item in the array is represented with a hyphen followed by a space, 
+            and each item is placed on a new, indented line.
+          </p>
+        </section>
+
+        <section data-exercise>
+          <h2>💪 Exercise 2</h2>
+          <p>This time, our witch has certain strengths and weaknesses, stored in arrays. Make sure to include all of the data in your answer.</p>
+          <JsonToYamlExercise jsonData={exercises.exercise02} />
+        </section>
       </div>
     </main>
   )
