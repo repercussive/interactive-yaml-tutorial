@@ -21,14 +21,16 @@ const demo02Yaml =
 hobbies:
   - skiing
   - gaming
-  - singing
-`
+  - singing`
 
 const demo03Json =
 `{
   "name": "Charlie",
   "address": {
-    "street": "123 YAML Avenue",
+    "house": {
+      "number": "123",
+      "street-name": "YAML Avenue"
+    },
     "city": "Datatown",
     "postcode": "Y4ML DA74" 
   }
@@ -37,12 +39,14 @@ const demo03Json =
 const demo03Yaml = 
 `name: Charlie
 address:
-  street: 123 YAML Avenue
+  house: 
+    number: 123
+    street-name: YAML Avenue
   city: Datatown
   postcode: Y4ML DA74`
 
 export default {
-  demo01: { json: demo01Json,  yaml: demo01Yaml },
-  demo02: { json: demo02Json, yaml: demo02Yaml },
-  demo03: { json: demo03Json, yaml: demo03Yaml }
+  demo_simple: { json: demo01Json,  yaml: demo01Yaml },
+  demo_arrays: { json: demo02Json, yaml: demo02Yaml },
+  demo_nestedData: { json: demo03Json, yaml: demo03Yaml }
 }

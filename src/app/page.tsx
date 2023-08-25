@@ -36,12 +36,12 @@ export default function Home() {
         <section data-example>
           <h2>📃 Example: simple, flat data</h2>
           <p>Take a look at the JSON object below, which has three key-value pairs.</p>
-          <CodeEditor initialValue={demos.demo01.json} language='json' readOnly />
+          <CodeEditor initialValue={demos.demo_simple.json} language='json' readOnly />
           <p>
             The equivalent YAML is below. Each key-value pair is represented as a simple line, with the key followed by a colon and the value.
             Notice that string values (e.g. Alice) don't need to be written in quotes.         
           </p>
-          <CodeEditor initialValue={demos.demo01.yaml} language='yaml' readOnly />
+          <CodeEditor initialValue={demos.demo_simple.yaml} language='yaml' readOnly />
           <p>As you can see, the YAML code has less noise and complexity, with the aim of being as readable as possible.</p>
         </section>
 
@@ -53,43 +53,59 @@ export default function Home() {
             Your task is to <b>write the equivalent YAML code</b> in the empty box.
             Once you're done, hit the "Check answer" button.
           </p>
-          <JsonToYamlExercise jsonData={exercises.exercise01} />
+          <JsonToYamlExercise jsonData={exercises.exercise_simple} />
         </section>
 
         {/* Example: arrays */}
         <section data-example>
           <h2>📃 Example: arrays</h2>
           <p>In JSON, arrays are expressed in a similar way as in JavaScript:</p>
-          <CodeEditor initialValue={demos.demo02.json} language='json' readOnly/>
+          <CodeEditor initialValue={demos.demo_arrays.json} language='json' readOnly/>
           <p>In YAML, the syntax looks quite different.</p>
-          <CodeEditor initialValue={demos.demo02.yaml} language='yaml' readOnly />
+          <CodeEditor initialValue={demos.demo_arrays.yaml} language='yaml' readOnly />
           <p>
             Each item in the array is represented with a hyphen followed by a space, 
-            and each item is placed on a new, indented line.
+            and each item is placed on a new line.
           </p>
+          <p>💡 Keep in mind:</p>
+          <ul>
+            <li>The space after each hyphen is necessary.</li>
+            <li>It's not strictly necessary to indent each element, but it is recommended.</li>
+          </ul>
         </section>
 
         {/* Exercise 2 */}
         <section data-exercise>
           <h2>💪 Exercise 2</h2>
           <p>This time, our witch has certain strengths and weaknesses, stored in arrays. Make sure to include all of the data in your answer.</p>
-          <JsonToYamlExercise jsonData={exercises.exercise02} />
+          <JsonToYamlExercise jsonData={exercises.exercise_arrays} />
         </section>
 
         {/* Example: nested data */}
         <section data-example>
           <h2>📃 Example: nested data</h2>
-          <p>In JSON, to create nested data, we place an object inside an object, as is the case with "address" in the following example:</p>
-          <CodeEditor initialValue={demos.demo03.json} language='json' readOnly />
-          <p>YAML uses indentation instead.</p>
-          <CodeEditor initialValue={demos.demo03.yaml} language='yaml' readOnly />
+          <p>In JSON, to create nested data, we place an object inside an object. Take a look at the address in the following example:</p>
+          <CodeEditor initialValue={demos.demo_nestedData.json} language='json' readOnly />
+          <p>
+            YAML uses indentation instead. 
+            Notice how the "street-name" property belongs to "house", which in turn belongs to "address":
+          </p>
+          <CodeEditor initialValue={demos.demo_nestedData.yaml} language='yaml' readOnly />
         </section>
 
         {/* Exercise 3 */}
         <section data-exercise>
         <h2>💪 Exercise 3</h2>
-        <p>Our Hexandra has various spells. You'll need to create multiple levels of nested YAML for this one.</p>
-        <JsonToYamlExercise jsonData={exercises.exercise03} />
+        <p>Our Hexandra now has various spells. You'll need to create a couple levels of nested YAML for this one.</p>
+        <p>💡 Tip: don't forget the <b>level</b> property.</p>
+        <JsonToYamlExercise jsonData={exercises.exercise_nestedData} />
+        </section>
+
+        {/* Exercise 4 */} 
+        <section data-exercise>
+        <h2>💪 Exercise 4</h2>
+        <p>It's possible for an array to be nested inside an object. Give this exercise a shot.</p>
+        <JsonToYamlExercise jsonData={exercises.exercise_nestedArrays} />
         </section>
       </div>
     </main>
