@@ -45,8 +45,50 @@ address:
   city: Datatown
   postcode: Y4ML DA74`
 
+const demo04Json = 
+`{
+  "name": Dan,
+  "family-members": [
+    { 
+      "name": "Alice"
+      "relationship": "sister"
+    },
+    {
+      "name": "Bob"
+      "relationship": "father"
+    },
+    {
+      "name": "Charlie"
+      "relationship": "son"
+    }
+  ]
+}`
+
+const demo04Yaml = 
+`name: Dan
+family-members:
+  - name: Alice
+    relationship: sister
+  - name: Bob
+    relationship: father
+  - name: Charlie
+    relationship: son`
+
+const demo04YamlAlt = 
+`name: Dan
+family-members:
+  - name: Alice
+    relationship: sister
+
+  - name: Bob
+    relationship: father
+
+  - name: Charlie
+    relationship: son`
+
 export default {
   demo_simple: { json: demo01Json,  yaml: demo01Yaml },
   demo_arrays: { json: demo02Json, yaml: demo02Yaml },
-  demo_nestedData: { json: demo03Json, yaml: demo03Yaml }
+  demo_nestedData: { json: demo03Json, yaml: demo03Yaml },
+  demo_arraysOfObjects: { json: demo04Json, yaml: demo04Yaml, yamlAlt: demo04YamlAlt }
 }

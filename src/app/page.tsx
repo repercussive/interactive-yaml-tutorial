@@ -53,7 +53,7 @@ export default function Home() {
             Your task is to <b>write the equivalent YAML code</b> in the empty box.
             Once you're done, hit the "Check answer" button.
           </p>
-          <JsonToYamlExercise jsonData={exercises.exercise_simple} />
+          <JsonToYamlExercise jsonData={exercises.simple} />
         </section>
 
         {/* Example: arrays */}
@@ -78,7 +78,7 @@ export default function Home() {
         <section data-exercise>
           <h2>💪 Exercise 2</h2>
           <p>This time, our witch has certain strengths and weaknesses, stored in arrays. Make sure to include all of the data in your answer.</p>
-          <JsonToYamlExercise jsonData={exercises.exercise_arrays} />
+          <JsonToYamlExercise jsonData={exercises.arrays} />
         </section>
 
         {/* Example: nested data */}
@@ -95,17 +95,45 @@ export default function Home() {
 
         {/* Exercise 3 */}
         <section data-exercise>
-        <h2>💪 Exercise 3</h2>
-        <p>Our Hexandra now has various spells. You'll need to create a couple levels of nested YAML for this one.</p>
-        <p>💡 Tip: don't forget the <b>level</b> property.</p>
-        <JsonToYamlExercise jsonData={exercises.exercise_nestedData} />
+          <h2>💪 Exercise 3</h2>
+          <p>Our Hexandra now has various spells. You'll need to create a couple levels of nested YAML for this one.</p>
+          <p>💡 Tip: don't forget the <b>level</b> property.</p>
+          <JsonToYamlExercise jsonData={exercises.nestedData} />
         </section>
 
         {/* Exercise 4 */} 
         <section data-exercise>
-        <h2>💪 Exercise 4</h2>
-        <p>It's possible for an array to be nested inside an object. Give this exercise a shot.</p>
-        <JsonToYamlExercise jsonData={exercises.exercise_nestedArrays} />
+          <h2>💪 Exercise 4</h2>
+          <p>It's possible for an array to be nested inside an object. Give this exercise a shot.</p>
+          <JsonToYamlExercise jsonData={exercises.nestedArrays} />
+        </section>
+
+        {/* Example: arrays of objects */}
+        <section data-example>
+          <h2>📃 Example: arrays of objects</h2>
+          <p>A common but slightly more complex data structure is an array where each element of the array is an object:</p>
+          <CodeEditor initialValue={demos.demo_arraysOfObjects.json} language='json' readOnly />
+          <p>
+            Notice how the equivalent YAML syntax logically develops what we've looked at already.
+            Each element of the array (each family member) is indicated separately by a hyphen, 
+            but instead of a single value, each array element is a set of key-value pairs.
+          </p>
+          <CodeEditor initialValue={demos.demo_arraysOfObjects.yaml} language='yaml' readOnly />
+          <p>
+            The example above might feel a little too condensed. It's a matter of preference, 
+            but adding an extra line between each array element can aid readability. 
+          </p>
+          <CodeEditor initialValue={demos.demo_arraysOfObjects.yamlAlt} language='yaml' readOnly />
+        </section>
+
+        {/* Exercise 5 */} 
+        <section data-exercise>
+          <h2>💪 Exercise 5</h2>
+          <p>
+            Hexandra also has a variety of skills, which can individually be levelled up as the game progresses.
+            You know what to do. 😎
+          </p>
+          <JsonToYamlExercise jsonData={exercises.arraysOfObjects} />
         </section>
       </div>
     </main>

@@ -1,17 +1,17 @@
 export default {
-  exercise_simple: {
+  simple: {
     "name": "Hexandra",
     "class": "witch",
     "damage": 25,
     "health": 85.5,
     "can-fly": true
   },
-  exercise_arrays: {
+  arrays: {
     "name": "Hexandra",
     "strengths": ["magic", "potions", "curses"],
     "weaknesses": ["iron", "holy water", "mirrors"] 
   },
-  exercise_nestedData: {
+  nestedData: {
     "name": "Hexandra",
     "spells": {
       "invisibility": {
@@ -25,11 +25,31 @@ export default {
     },
     "level": 60
   },
-  exercise_nestedArrays: {
+  nestedArrays: {
     "name": "Hexandra",
     "inventory": {
       "artifacts": ["Crystal", "Amulet"],
       "potions": ["Healing Potion", "Defense Potion"]
     }
+  },
+  arraysOfObjects: {
+    "name": "Hexandra",
+    "skills": [
+      {
+        "name": "Potion Brewing",
+        "level": 8,
+        "max-level": 50
+      },
+      {
+        "name": "Enchanting",
+        "level": 4,
+        "max-level": 20
+      },
+      {
+        "name": "Herbology",
+        "unlocked": false,
+        "max-level": 30
+      },
+    ]
   }
 }
