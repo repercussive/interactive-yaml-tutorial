@@ -37,7 +37,12 @@ export default function JsonToYamlExercise({ jsonData }: Props) {
   return (
     <div className={styles.wrapper}>
       <div>
-        <CodeEditor language='json' startValue={jsonString} minHeight={minimumLines} readOnly />
+        <CodeEditor 
+          language='json' 
+          initialValue={jsonString} 
+          minHeight={minimumLines} 
+          readOnly 
+        />
         <CodeEditor 
           language='yaml' 
           minHeight={minimumLines}

@@ -1,18 +1,20 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.75rem;
 
   &>div {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: stretch;
+    justify-content: space-between;
     width: 100%;
-    gap: 0.75rem;
+    gap: 0.8rem;
 
     &>* {
       flex: 1;
+      max-width: 100%;
     }
 
     &[data-is-correct=true] {
@@ -40,14 +42,16 @@
     color: rgb(173, 173, 173);
     background-color: rgba(255, 255, 255, 0.088);
     border-radius: 5px;
-    min-height: 2rem;
+    padding: 0.4rem 0;
+    margin-block: 0 !important;
+    border: solid 2px transparent;
   }
 
   button {
     box-sizing: content-box;
     color: white;
     background-color: rgb(90, 119, 205);
-    border: solid 2px rgb(44, 57, 116);
+    border: solid 2px rgb(112, 137, 212);
 
     &:not(:disabled):hover {
       background-color: rgb(73, 99, 177);

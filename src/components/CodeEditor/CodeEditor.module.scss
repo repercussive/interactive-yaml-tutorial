@@ -1,7 +1,8 @@
 .wrapper {
   &>p {
     color: gray;
-    margin-bottom: 0.4rem;
+    margin-top: 0 !important;
+    margin-bottom: 0.4rem !important;
   }
 
   &>div {
