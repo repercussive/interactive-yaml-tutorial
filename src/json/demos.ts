@@ -6,8 +6,8 @@ const demo01Json =
 }`
 
 const demo01Yaml = 
-`name: Alice,
-age: 25,
+`name: Alice
+age: 25
 wears-glasses: true`
 
 export default {
