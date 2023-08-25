@@ -36,13 +36,14 @@ export default function Home() {
           <p>Take a look at the JSON object below, which has three key-value pairs.</p>
           <CodeEditor initialValue={demos.exercise01.json} language='json' readOnly />
           <p>
-            In the equivalent YAML, each key-value pair is represented as a simple line, with the key followed by a colon and the value.
+            The equivalent YAML is below. Each key-value pair is represented as a simple line, with the key followed by a colon and the value.
             Notice that string values (e.g. Alice) don't need to be written in quotes.         
           </p>
           <CodeEditor initialValue={demos.exercise01.yaml} language='yaml' readOnly />
+          <p>As you can see, the YAML code has less noise and complexity, with the aim of being as readable as possible.</p>
         </section>
 
-        <section data-exercise>
+        <section data-exercise> 
           <h2>💪 Exercise 1</h2>
           <p>
             Welcome to the first exercise! Take a look at the JSON data below representing a character in a video game. 

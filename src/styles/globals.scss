@@ -20,6 +20,7 @@ button {
   border-radius: 5px;
   font-size: 1rem;
   padding: 0.4rem 0;
+  transition: background-color 80ms !important;
 
   &:not(:disabled) {
     cursor: pointer;
