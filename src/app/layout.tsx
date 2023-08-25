@@ -1,8 +1,9 @@
 import '../styles/globals.scss'
 import type { Metadata } from 'next'
-import { Work_Sans } from 'next/font/google'
+import { Rubik, Roboto_Mono } from 'next/font/google'
 
-const workSans = Work_Sans({ subsets: ['latin'] })
+export const rubik = Rubik({ subsets: ['latin'], display: 'swap', variable: '--font-rubik' })
+export const robotoMono = Roboto_Mono({ subsets: ['latin'], display: 'swap', variable: '--font-roboto-mono' })
 
 export const metadata: Metadata = {
   title: 'Interactive YAML tutorial',
@@ -11,8 +12,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children, }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={workSans.className}>{children}</body>
+    <html lang="en" className={`${rubik.variable} ${robotoMono.variable}`}>
+      <body>{children}</body>
     </html>
   )
 }

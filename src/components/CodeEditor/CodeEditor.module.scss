@@ -12,6 +12,10 @@
     border: solid 2px;
     border-color: rgb(62, 62, 62);
 
+    & * {
+      font-family: 'Roboto Mono', 'Menlo', monospace;
+    }
+
     &[data-highlight=green] {
       border-color: rgb(161, 229, 161);
     }
