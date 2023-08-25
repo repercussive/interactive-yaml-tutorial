@@ -10,5 +10,19 @@ export default {
     "name": "Hexandra",
     "strengths": ["magic", "potions", "curses"],
     "weaknesses": ["iron", "holy water", "mirrors"] 
+  },
+  exercise03: {
+    "name": "Hexandra",
+    "spells": {
+      "invisibility": {
+        "duration": 10,
+        "cooldown": 60
+      },
+      "mind-control": {
+        "success-chance": 0.5,
+        "cooldown": 90
+      }
+    },
+    "level": 60
   }
 }

@@ -24,7 +24,25 @@ hobbies:
   - singing
 `
 
+const demo03Json =
+`{
+  "name": "Charlie",
+  "address": {
+    "street": "123 YAML Avenue",
+    "city": "Datatown",
+    "postcode": "Y4ML DA74" 
+  }
+}`
+
+const demo03Yaml = 
+`name: Charlie
+address:
+  street: 123 YAML Avenue
+  city: Datatown
+  postcode: Y4ML DA74`
+
 export default {
-  exercise01: { json: demo01Json,  yaml: demo01Yaml },
-  exercise02: { json: demo02Json, yaml: demo02Yaml }
+  demo01: { json: demo01Json,  yaml: demo01Yaml },
+  demo02: { json: demo02Json, yaml: demo02Yaml },
+  demo03: { json: demo03Json, yaml: demo03Yaml }
 }
