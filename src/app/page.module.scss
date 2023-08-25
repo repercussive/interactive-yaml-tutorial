@@ -26,10 +26,15 @@
     ul, ol, p {
       white-space: pre-line;
       margin-block: 1.25rem;
+      line-height: 1.4rem;
 
       &:last-child {
         margin-block-end: 0;
       }
+    }
+
+    p + ul, p + ol {
+      margin-block-start: -0.5rem;
     }
 
     li {
@@ -47,6 +52,15 @@
     &[data-exercise] {
       background-color: rgba(255, 255, 255, 0.022);
       border: solid 1.5px #6a6d73;
+
+      &:has(*[data-is-correct=true]) {
+        border-color: rgb(107, 157, 107);
+        background-color: rgba(60, 81, 58, 0.205);
+      }
+
+      & * {
+        transition: border-color 500ms, background-color 500ms;
+      }
     }
 
     &[data-info] {
