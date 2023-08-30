@@ -36,12 +36,12 @@ export default function Home() {
         <section data-example>
           <h2>📃 Example: simple, flat data</h2>
           <p>Take a look at the JSON object below, which has three key-value pairs.</p>
-          <CodeEditor initialValue={demos.demo_simple.json} language='json' readOnly />
+          <CodeEditor initialValue={demos.simple.json} language='json' readOnly />
           <p>
             The equivalent YAML is below. Each key-value pair is represented as a simple line, with the key followed by a colon and the value.
             Notice that string values (e.g. Alice) don't need to be written in quotes.         
           </p>
-          <CodeEditor initialValue={demos.demo_simple.yaml} language='yaml' readOnly />
+          <CodeEditor initialValue={demos.simple.yaml} language='yaml' readOnly />
           <p>As you can see, the YAML code has less noise and complexity, with the aim of being as readable as possible.</p>
         </section>
 
@@ -60,9 +60,9 @@ export default function Home() {
         <section data-example>
           <h2>📃 Example: arrays</h2>
           <p>In JSON, arrays are expressed in a similar way as in JavaScript:</p>
-          <CodeEditor initialValue={demos.demo_arrays.json} language='json' readOnly/>
+          <CodeEditor initialValue={demos.arrays.json} language='json' readOnly/>
           <p>In YAML, the syntax looks quite different.</p>
-          <CodeEditor initialValue={demos.demo_arrays.yaml} language='yaml' readOnly />
+          <CodeEditor initialValue={demos.arrays.yaml} language='yaml' readOnly />
           <p>
             Each item in the array is represented with a hyphen followed by a space, 
             and each item is placed on a new line.
@@ -85,12 +85,12 @@ export default function Home() {
         <section data-example>
           <h2>📃 Example: nested data</h2>
           <p>In JSON, to create nested data, we place an object inside an object. Take a look at the address in the following example:</p>
-          <CodeEditor initialValue={demos.demo_nestedData.json} language='json' readOnly />
+          <CodeEditor initialValue={demos.nestedData.json} language='json' readOnly />
           <p>
             YAML uses indentation instead. 
             Notice how the "street-name" property belongs to "house", which in turn belongs to "address":
           </p>
-          <CodeEditor initialValue={demos.demo_nestedData.yaml} language='yaml' readOnly />
+          <CodeEditor initialValue={demos.nestedData.yaml} language='yaml' readOnly />
         </section>
 
         {/* Exercise 3 */}
@@ -112,18 +112,18 @@ export default function Home() {
         <section data-example>
           <h2>📃 Example: arrays of objects</h2>
           <p>A common but slightly more complex data structure is an array where each element of the array is an object:</p>
-          <CodeEditor initialValue={demos.demo_arraysOfObjects.json} language='json' readOnly />
+          <CodeEditor initialValue={demos.arraysOfObjects.json} language='json' readOnly />
           <p>
             Notice how the equivalent YAML syntax logically develops what we've looked at already.
             Each element of the array (each family member) is indicated separately by a hyphen, 
             but instead of a single value, each array element is a set of key-value pairs.
           </p>
-          <CodeEditor initialValue={demos.demo_arraysOfObjects.yaml} language='yaml' readOnly />
+          <CodeEditor initialValue={demos.arraysOfObjects.yaml} language='yaml' readOnly />
           <p>
             The example above might feel a little too condensed. It's a matter of preference, 
             but adding an extra line between each array element can aid readability. 
           </p>
-          <CodeEditor initialValue={demos.demo_arraysOfObjects.yamlAlt} language='yaml' readOnly />
+          <CodeEditor initialValue={demos.arraysOfObjects.yamlAlt} language='yaml' readOnly />
         </section>
 
         {/* Exercise 5 */} 
@@ -134,6 +134,29 @@ export default function Home() {
             You know what to do. 😎
           </p>
           <JsonToYamlExercise jsonData={exercises.arraysOfObjects} />
+        </section>
+
+        {/* Intermission */}
+        <section data-info>
+          <h2>👏 You've got the fundamentals down</h2>
+          <p>
+            If you've completed all the exercises up to this point, 
+            then you have the skills to read and write 80-90% of the YAML out there.
+          </p>
+          <p>From this point on, it's just bonus features and extra challenges.</p>
+        </section>
+
+        <section data-example>
+          <h2>📃 Example: comments</h2>
+          <p>
+            One limitation of JSON is that it can only store data. 
+            There's no way to store comments in JSON to help humans understand and contextualise the data.
+          </p>
+          <p>
+            Thankfully, YAML does support comments, which is super handy.
+            Here's an example of making a (fictional) configuration file easier to scan and decipher:
+          </p>
+          <CodeEditor initialValue={demos.comments.yaml} language='yaml' readOnly />
         </section>
       </div>
     </main>

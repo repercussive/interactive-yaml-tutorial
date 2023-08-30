@@ -86,9 +86,23 @@ family-members:
   - name: Charlie
     relationship: son`
 
+const demo05Yaml = 
+`build-steps:
+  # Install dependencies
+  - run: npm ci
+    with:
+      node-version: "20.5.0"
+
+  # Bundle application to /dist folder
+  - run: npm run build
+  
+  # Run unit tests
+  - run: npm test`
+
 export default {
-  demo_simple: { json: demo01Json,  yaml: demo01Yaml },
-  demo_arrays: { json: demo02Json, yaml: demo02Yaml },
-  demo_nestedData: { json: demo03Json, yaml: demo03Yaml },
-  demo_arraysOfObjects: { json: demo04Json, yaml: demo04Yaml, yamlAlt: demo04YamlAlt }
+  simple: { json: demo01Json,  yaml: demo01Yaml },
+  arrays: { json: demo02Json, yaml: demo02Yaml },
+  nestedData: { json: demo03Json, yaml: demo03Yaml },
+  arraysOfObjects: { json: demo04Json, yaml: demo04Yaml, yamlAlt: demo04YamlAlt },
+  comments: { yaml: demo05Yaml }
 }
