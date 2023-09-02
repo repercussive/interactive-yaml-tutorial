@@ -120,7 +120,7 @@ export default function Home() {
           </p>
           <CodeEditor initialValue={demos.arraysOfObjects.yaml} language='yaml' readOnly />
           <p>
-            The example above might feel a little too condensed. It's a matter of preference, 
+            The example above might feel a little cramped. It's a matter of preference, 
             but adding an extra line between each array element can aid readability. 
           </p>
           <CodeEditor initialValue={demos.arraysOfObjects.yamlAlt} language='yaml' readOnly />
@@ -154,9 +154,11 @@ export default function Home() {
           </p>
           <p>
             Thankfully, YAML does support comments, which is super handy.
-            Here's an example of making a (fictional) configuration file easier to scan and decipher:
+            To create one, just place a hash (#) symbol followed by your comment.
           </p>
+          <p>Here's an example of using comments to make a (fictional) configuration file easier to scan and decipher:</p>
           <CodeEditor initialValue={demos.comments.yaml} language='yaml' readOnly />
+          <p>Feel free to add comments to any of the previous exercises, and notice that it has no effect on your correct answers.</p>
         </section>
       </div>
     </main>
