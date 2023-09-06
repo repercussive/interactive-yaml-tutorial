@@ -87,7 +87,7 @@ family-members:
     relationship: son`
 
 const demo05Yaml = 
-`build-steps:
+`pipeline:
   # Install dependencies
   - run: npm ci
     with:
@@ -99,10 +99,31 @@ const demo05Yaml =
   # Run unit tests
   - run: npm test`
 
+
+const demo06aYaml = 
+`my-string: >
+  This string is way too long for a single line,
+  so I've decided to wrap it onto multiple lines.
+  In the resulting string, the line breaks will be turned into spaces.`
+
+const demo06bYaml = 
+`pipeline:
+  steps:
+    - name: Set environment variables
+      run: |
+        if [ "\${{ github.ref }}" == "refs/heads/main" ]; then
+          echo "Setting environment to production"
+          export ENVIRONMENT=production
+        else
+          echo "Setting environment to staging"
+          export ENVIRONMENT=staging
+        fi`
+
 export default {
   simple: { json: demo01Json,  yaml: demo01Yaml },
   arrays: { json: demo02Json, yaml: demo02Yaml },
   nestedData: { json: demo03Json, yaml: demo03Yaml },
   arraysOfObjects: { json: demo04Json, yaml: demo04Yaml, yamlAlt: demo04YamlAlt },
-  comments: { yaml: demo05Yaml }
+  comments: { yaml: demo05Yaml },
+  multiLineString: { yamlA: demo06aYaml, yamlB: demo06bYaml }
 }
